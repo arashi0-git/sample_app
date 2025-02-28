@@ -1,5 +1,6 @@
 require "test_helper"
 
+<<<<<<< HEAD
 class UsersLogin < ActionDispatch::IntegrationTest
 
   def setup
@@ -18,11 +19,23 @@ class InvalidPasswordTest < UsersLogin
     post login_path, params: { session: { email:    @user.email,
                                           password: "invalid" } }
     assert_not is_logged_in?
+=======
+class UsersLoginTest < ActionDispatch::IntegrationTest
+  def setup
+    @user = users(:michael)
+  end
+  test "login with invalid information" do
+    get login_path
+    assert_template 'sessions/new'
+    post login_path, params: { session: { email: "", password: "" } }
+    assert_response :unprocessable_entity
+>>>>>>> 1e16b04df283e160dd45d63dd293608875527e02
     assert_template 'sessions/new'
     assert_not flash.empty?
     get root_path
     assert flash.empty?
   end
+
 end
 
 class ValidLogin < UsersLogin
@@ -73,3 +86,4 @@ class LogoutTest < Logout
     assert_select "a[href=?]", user_path(@user), count: 0
   end
 end
+
