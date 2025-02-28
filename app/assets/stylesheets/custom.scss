@@ -102,6 +102,24 @@ footer {
     }
   }
 }
+@media (max-width: 800px) {
+  footer {
+    small {
+      display: block;
+      float: none;
+      margin-bottom: 1em;
+    }
+    ul {
+      float: none;
+      padding: 0;
+      li {
+        float: none;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
 /* miscellaneous */
 .debug_dump {
   clear: both;
@@ -111,6 +129,7 @@ footer {
 }
 
 /* sidebar */
+
 aside {
   section.user_info {
     margin-top: 20px;
@@ -136,23 +155,25 @@ aside {
     }
   }
 }
-  
+
 .gravatar {
   float: left;
   margin-right: 10px;
 }
-  
+
 .gravatar_edit {
   margin-top: 15px;
 }
 
 /* forms */
+
 input, textarea {
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
   @include box_sizing;
 }
+
 input {
   height: auto !important;
 }
@@ -170,4 +191,10 @@ input {
   .form-control {
     color: $state-danger-text;
   }
+}
+
+/* Dropdown menu */
+
+.dropdown-menu.active {
+  display: block;
 }
