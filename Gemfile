@@ -1,30 +1,26 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.3.6"
+ruby "3.2.6"
 
-gem "rails",           "7.0.4.3"
+gem "rails",                      "7.0.4.3"
 gem "image_processing",           "1.12.2"
 gem "active_storage_validations", "0.9.8"
-gem "bcrypt",          "3.1.18"
-gem "faker",           "2.21.0"
-gem "will_paginate",           "3.3.1"
-gem "bootstrap-will_paginate", "1.0.0"
-gem "bootstrap-sass",  "3.4.1"
-gem "sassc-rails",     "2.1.2"
-gem "sprockets-rails", "3.4.2"
-gem "importmap-rails", "1.1.5"
-gem "turbo-rails",     "1.4.0"
-gem "stimulus-rails",  "1.2.1"
-gem "jbuilder",        "2.11.5"
-gem "puma",            "5.6.8"
-gem "bootsnap",        "1.16.0", require: false
-gem "sqlite3",         "1.6.1"
+gem "bcrypt",                     "3.1.18"
+gem "faker",                      "2.21.0"
+gem "will_paginate",              "3.3.1"
+gem "bootstrap-will_paginate",    "1.0.0"
+gem "bootstrap-sass",             "3.4.1"
+gem "sassc-rails",                "2.1.2"
+gem "sprockets-rails",            "3.4.2"
+gem "importmap-rails",            "1.1.5"
+gem "turbo-rails",                "1.4.0"
+gem "stimulus-rails",             "1.2.1"
+gem "jbuilder",                   "2.11.5"
+gem "puma",                       "5.6.8"
+gem "bootsnap",                   "1.16.0", require: false
+gem "sqlite3",                    "1.6.1"
 gem "concurrent-ruby", "1.3.4"
-
-group :production do
-  gem "aws-sdk-s3", "1.114.0", require: false
-end
 
 group :development, :test do
   gem 'reline', '0.5.10'
@@ -50,8 +46,8 @@ group :test do
 end
 
 group :production do
-  gem "pg", "1.3.5"
+  gem "aws-sdk-s3", "1.114.0", require: false
 end
 
 # Windows ではタイムゾーン情報用の tzinfo-data gem を含める必要があります
-# gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+#gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
