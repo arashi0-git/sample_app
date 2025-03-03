@@ -1,4 +1,5 @@
 class Micropost < ApplicationRecord
+  validates :content, presence: true, length: { maximum: 140 }
   belongs_to :user
   has_one_attached :image do |attachable|
     attachable.variant :display, resize_to_limit: [500, 500]

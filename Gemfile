@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.2.6"
+ruby "3.3.6"
 
 gem "rails",                      "7.0.4.3"
 gem "image_processing",           "1.12.2"
@@ -21,6 +21,10 @@ gem "puma",                       "5.6.8"
 gem "bootsnap",                   "1.16.0", require: false
 gem "sqlite3",                    "1.6.1"
 gem "concurrent-ruby", "1.3.4"
+
+gem 'bigdecimal'
+gem 'drb'
+gem 'mutex_m'
 
 group :development, :test do
   gem 'reline', '0.5.10'
